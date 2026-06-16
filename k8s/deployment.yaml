@@ -22,7 +22,7 @@ spec:
       containers:
       - name: retail-api
         # Notice we are pulling the image you pushed to Docker Hub in Phase 3
-        image: /retail-api:v1
+        image: vineethpv1997/retail-api:v1
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
