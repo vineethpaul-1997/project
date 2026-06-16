@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: retail-api-ingress
 spec:
-  ingressClassName: public
+  ingressClassName: nginx  # <--- CHANGED THIS LINE
   rules:
   - http:
       paths:
@@ -11,6 +11,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: retail-api-service # Routes external traffic to this internal service
+            name: retail-api-service
             port:
               number: 80
