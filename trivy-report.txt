@@ -1,0 +1,24 @@
+
+Report Summary
+
+┌──────────────────┬──────┬─────────────────┬─────────┬───────────────────┐
+│      Target      │ Type │ Vulnerabilities │ Secrets │ Misconfigurations │
+├──────────────────┼──────┼─────────────────┼─────────┼───────────────────┤
+│ requirements.txt │ pip  │        1        │    -    │         -         │
+└──────────────────┴──────┴─────────────────┴─────────┴───────────────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+
+requirements.txt (pip)
+======================
+Total: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
+
+┌─────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬───────────────────────────────────────────────────────────┐
+│ Library │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                           Title                           │
+├─────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼───────────────────────────────────────────────────────────┤
+│ pytest  │ CVE-2025-71176 │ MEDIUM   │ fixed  │ 7.4.3             │ 9.0.3         │ pytest: pytest: Denial of Service or Privilege Escalation │
+│         │                │          │        │                   │               │ via insecure temporary directory...                       │
+│         │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2025-71176                │
+└─────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴───────────────────────────────────────────────────────────┘

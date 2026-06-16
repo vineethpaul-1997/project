@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: retail-api-deployment
+  labels:
+    app: retail-api
+spec:
+  replicas: 2 # Kubernetes will ensure exactly 2 pods are always running
+  selector:
+    matchLabels:
+      app: retail-api
+  template:
+    metadata:
+      labels:
+        app: retail-api
+      annotations:
+        # CRITICAL FOR PHASE 6: These 3 lines tell Prometheus where to scrape metrics!
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8000"
+        prometheus.io/path: "/metrics"
+    spec:
+      containers:
+      - name: retail-api
+        # Notice we are pulling the image you pushed to Docker Hub in Phase 3
+        image: /retail-api:v1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8000

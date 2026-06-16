@@ -1,0 +1,6 @@
+fastapi==0.104.1
+uvicorn==0.24.0.post1
+pytest==7.4.3
+flake8==6.1.0
+coverage==7.3.2
+httpx==0.25.1
